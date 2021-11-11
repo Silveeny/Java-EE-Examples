@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+      xmlns:fn="http://xmlns.jcp.org/jsp/jstl/functions"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+      <h:body>
+
+        <h:form>
+          <div class="exam-definiton">
+            <h:inputText id="examname" value="#{exam.name}" styleClass="p-d-block"/>
+            <small class="p-d-block">#{msg.enter_exam}</small>
+          </div>
+
+          <div class="exam-timing">
+            <div class="p-field p-col-12 p-md-4">
+                <p:inputNumber id="input1" value="#{exam.start}"  />
+                <small class="p-d-block">#{msg.start_date}</small>
+            </div>
+
+            <div class="p-field p-col-12 p-md-4">
+                <p:inputNumber id="input2" value="#{exam.duration}" />
+                <small class="p-d-block">#{msg.exam_duration}</small>
+            </div>
+          </div>
+
+          <h:commandButton id="submit" value="Submit" action="#{exam.submit()}"/>
+
+        </h:form>
+
+      </h:body>
+</html>
+<!--Luat din documentatia de prime faces https://www.primefaces.org/showcase/index.xhtml?jfwid=5da41 / style class e pt css-->
