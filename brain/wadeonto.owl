@@ -1,0 +1,694 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/wadeonto"
+     xml:base="http://www.semanticweb.org/wadeonto"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/wadeonto"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#builtIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wadeonto#builtIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wadeonto#AppleTeddy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/wadeonto#Germany"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#consumeOn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wadeonto#consumeOn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wadeonto#Pepsi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#hasIngridient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wadeonto#hasIngridient">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wadeonto#AppleTeddy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/wadeonto#Apple"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/wadeonto#Sugar"/>
+    </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/wadeonto#hasIngridient"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+        <owl:annotatedTarget rdf:resource="http://www.semanticweb.org/wadeonto#Sugar"/>
+        <rdfs:comment>0.5g</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#targetedFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/wadeonto#targetedFor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/wadeonto#AppleTeddy"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/wadeonto#Diabetic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#AllergicApple -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#AllergicApple">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Restriction"/>
+        <rdfs:label>AllergicApple</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#AllergicBerries -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#AllergicBerries">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Restriction"/>
+        <rdfs:label>AllergicBerries</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Apple -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Apple">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Ingredient"/>
+        <rdfs:label>Apple</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#AppleTeddy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#AppleTeddy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Teddy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Arabica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Arabica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Coffee"/>
+        <rdfs:label>Arabica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#ArtificialSugar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#ArtificialSugar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Ingredient"/>
+        <rdfs:label>ArtificalSugar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Austria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Austria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#BlackTea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#BlackTea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Tea"/>
+        <rdfs:label>BlackTea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#BlueMountain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#BlueMountain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Coffee"/>
+        <rdfs:label>BlueMountain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#CabernetSovignon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#CabernetSovignon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#CarbonatedDrinks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#CarbonatedDrinks"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Carrot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Carrot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Ingredient"/>
+        <rdfs:label>Carrot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#CarrotTeddy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#CarrotTeddy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Teddy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Coffee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Coffee"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Cola -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Cola">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#CarbonatedDrinks"/>
+        <rdfs:label>Cola</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#ColaLemon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#ColaLemon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Cola"/>
+        <rdfs:label>ColaLemon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#ColaZero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#ColaZero">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Cola"/>
+        <rdfs:label>ColaZero</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Country"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Diabetic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Diabetic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Restriction"/>
+        <rdfs:label>Diabetic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Diabolo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Diabolo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Mocktail"/>
+        <rdfs:label>Diabolo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#DrPepper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#DrPepper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Cola"/>
+        <rdfs:label>DrPepper</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Easter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Easter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Events"/>
+        <rdfs:label>Easter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Events -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Events"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Fanta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Fanta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#CarbonatedDrinks"/>
+        <rdfs:label>Fanta</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#FantaMaddness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#FantaMaddness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Fanta"/>
+        <rdfs:label>FantaMaddness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#FantaOrange -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#FantaOrange">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Fanta"/>
+        <rdfs:label>FantaOrange</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Germany -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Germany">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Grape -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Grape">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Ingredient"/>
+        <rdfs:label>Grape</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#GreenTea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#GreenTea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Tea"/>
+        <rdfs:label>GreenTea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Hipertensiv -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Hipertensiv">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Restriction"/>
+        <rdfs:label>Hipertensiv</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Ingredient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Ingredient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Japan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Japan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Kilimanjaro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Kilimanjaro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Coffee"/>
+        <rdfs:label>Kilimanjaro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Mocktail -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Mocktail"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#MontBlanc -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#MontBlanc">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Wine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Negroni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Negroni">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Mocktail"/>
+        <rdfs:label>Negroni</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#OrageJuice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#OrageJuice"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Orange -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Orange">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Ingredient"/>
+        <rdfs:label>Orange</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#OrangeTeddy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#OrangeTeddy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Teddy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Party -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Party">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Events"/>
+        <rdfs:label>Party</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#People -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#People"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Pepsi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Pepsi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#CarbonatedDrinks"/>
+        <rdfs:label>Pepsi</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#PepsiMax -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#PepsiMax">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Pepsi"/>
+        <rdfs:label>PepsiMax</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#PepsiTwist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#PepsiTwist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Pepsi"/>
+        <rdfs:label>PepsiTwist</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Pomegranate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Pomegranate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Mocktail"/>
+        <rdfs:label>Pomegranate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Restriction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Restriction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Romania -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Romania">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Spain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Spain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#SpringDaytime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#SpringDaytime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Events"/>
+        <rdfs:label>SpringDaytime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#SpringNightTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#SpringNightTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Events"/>
+        <rdfs:label>SpringNightTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Sugar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Sugar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Ingredient"/>
+        <rdfs:label>Sugar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#SummerDayTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#SummerDayTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Events"/>
+        <rdfs:label>SummerDayTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#SummerNightTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#SummerNightTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Events"/>
+        <rdfs:label>SummerNightTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Tea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Tea"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Teddy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Teddy"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#UK -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#UK">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#US -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#US">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Vegan -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Vegan">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Restriction"/>
+        <rdfs:label>Vegan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Whisky -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Whisky"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#WhiteTea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#WhiteTea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Tea"/>
+        <rdfs:label>WhiteTea</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Wine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#Wine"/>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#WinterNightTime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/wadeonto#WinterNightTime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/wadeonto#Events"/>
+        <rdfs:label>WinterNightTime</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Austria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wadeonto#Austria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wadeonto#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Germany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wadeonto#Germany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wadeonto#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Japan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wadeonto#Japan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wadeonto#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Romania -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wadeonto#Romania">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wadeonto#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#Spain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wadeonto#Spain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wadeonto#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#UK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wadeonto#UK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wadeonto#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/wadeonto#US -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/wadeonto#US">
+        <rdf:type rdf:resource="http://www.semanticweb.org/wadeonto#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/wadeonto#Austria">
+        <rdfs:label>Austria</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/wadeonto#Germany">
+        <rdfs:label>Germany</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/wadeonto#Japan">
+        <rdfs:label>Japan</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/wadeonto#Romania">
+        <rdfs:label>Romania</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/wadeonto#Spain">
+        <rdfs:label>Spain</rdfs:label>
+        <rdfs:comment>https://germany.com</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/wadeonto#UK">
+        <rdfs:label>UK</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/wadeonto#US">
+        <rdfs:label>US</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
