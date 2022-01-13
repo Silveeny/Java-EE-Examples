@@ -1,6 +1,8 @@
 Overview
 =========
 
+This is my project for WaDE - done using Java microservices for ontologies. My project is #2 BEM - https://profs.info.uaic.ro/~busaco/teach/courses/wade/projects/ and I attempted to use Java for it. 
+
 There are 2 microservice:
 - **brain** that performs various SPARQL queries on the ontology exposed by apache jena fuseki server on the endpoint `localhost:3030/test`
  and exposes thee results obtained by running these queries to various JAX-RS endpoints
@@ -14,3 +16,4 @@ Next Steps
 ===========
 * the search functionality is still work in progress
 * I plan to add a container with memcached in order to cache common queris in brain, saving compute time (basically I will add a Kafka queue to which I push every query and a background job will reead from thee topic and createe the appropiate memchached entry)
+* Still plenty of work to do on the ontologies
