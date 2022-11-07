@@ -12,7 +12,7 @@ A step-by-step Java Servlet tutorial - that builds up to creating an APP using J
     Lab 5 - Java Persistence API (JPA)
     Lab 6 - Enterprise Java Beans (EJB)
     Lab 7 - Beans & Login Built
-    Wade - Java Fuseki build for ontology based website
+    Wade - Java Fuseki + Payara Micro build for ontology based website
     
    
 
